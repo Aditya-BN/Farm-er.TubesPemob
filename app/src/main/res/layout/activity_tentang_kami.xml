@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/sawah"
+    tools:context=".TentangKami"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FARM.ER"
+                android:textSize="30dp"
+                android:layout_marginTop="115dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/open_sans_extrabold"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="425dp"
+                android:layout_marginTop="100dp"
+                android:background="#51613E">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/allerta_stencil"
+                    android:text="Pembelian sayuran dan buah-buahan lebih mudah dengan aplikasi ini! \n\n Aplikasi ini dirancang khusus untuk pembeli agar mendapatkan produk sayuran maupun buah-buahan yang segar langsung dari petani.
+                    \n\n Desain dan fitur yang kami gunakan akan membantu pembeli dalam memudahkan pemakaian aplikasi kami.
+
+                    \n\n Produk yang kami jual berasal dari petani unggul wilayah magelang dengan kualitas tinggi yang telah kami kemas dengan baik.
+
+                    \n\n Selain itu aplikasi ini dibuat untuk mendukung gerakan petani lokal untuk maju dalam memajukan pertanian indonesia."
+                    android:textAlignment="center"
+                    android:textColor="#FDFCFC" />
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#51613E"
+
+                android:gravity="center">
+                <Button
+                    android:id="@+id/kembali"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Kembali"
+                    android:background="@drawable/button_border"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#8d93ab">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kontak Kami :"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
+                    android:textAlignment="center"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Telp: 021 88990011"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
+                    android:textAlignment="center"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email: paboyah@gmail.com"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat: Jalan Gedung Gede Yogyakarta City"
+                    android:textSize="18dp"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

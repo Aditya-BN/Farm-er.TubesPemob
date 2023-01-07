@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProdukSayur"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout">
+
+    <TextView
+        android:id="@+id/klik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/open_sans_extrabold"
+        android:text="Farm.er"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#8d93ab"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/frame_kentang"
+                    android:layout_width="150dp"
+                    android:layout_height="285dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="5dp">
+                        <ImageView
+                            android:id="@+id/kentang"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/kentang"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="42dp"
+                        android:clickable="false"
+                        android:text="KENTANG"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:clickable="false"
+                        android:text="Rp. 10.500/kg"
+                        android:textSize="15dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusBtn"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="210dp"
+                            android:text="-"
+                            android:background="@drawable/button_border"/>
+
+                        <TextView
+                            android:id="@+id/counterText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="0"
+                            android:textSize="15dp" />
+
+                        <Button
+                            android:id="@+id/plusBtn"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="210dp"
+                            android:text="+"
+                            android:textAlignment="center"
+                            android:background="@drawable/button_border"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="250dp"
+                        android:layout_marginLeft="32dp"
+                        android:text="Add"
+                        android:id="@+id/kentangAdd"
+                        android:textSize="10dp"
+                        android:background="@drawable/button_border"/>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/frame_caberawit"
+                    android:layout_width="150dp"
+                    android:layout_height="285dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="5dp">
+                        <ImageView
+                            android:id="@+id/caberawit"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/caberawit"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="32dp"
+                        android:clickable="false"
+                        android:text="CABE RAWIT"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:clickable="false"
+                        android:text="Rp. 7.000/ons"
+                        android:textSize="15dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusBtn2"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="210dp"
+                            android:text="-"
+                            android:background="@drawable/button_border"/>
+
+                        <TextView
+                            android:id="@+id/counterText2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="0"
+                            android:textSize="15dp" />
+
+                        <Button
+                            android:id="@+id/plusBtn2"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="210dp"
+                            android:text="+"
+                            android:textAlignment="center"
+                            android:background="@drawable/button_border"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="250dp"
+                        android:layout_marginLeft="32dp"
+                        android:text="Add"
+                        android:id="@+id/rawitAdd"
+                        android:textSize="10dp"
+                        android:background="@drawable/button_border"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#8d93ab"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/frame_cabe"
+                    android:layout_width="150dp"
+                    android:layout_height="285dp"
+                    android:layout_marginLeft="40dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="5dp">
+                        <ImageView
+                            android:id="@+id/cabe"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/cabe"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="55dp"
+                        android:clickable="false"
+                        android:text="CABAI"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:clickable="false"
+                        android:text="Rp. 5.000/ons"
+                        android:textSize="15dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusBtn3"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="210dp"
+                            android:text="-"
+                            android:textAlignment="center"
+                            android:background="@drawable/button_border"/>
+
+                        <TextView
+                            android:id="@+id/counterText3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="0"
+                            android:textSize="15dp" />
+
+                        <Button
+                            android:id="@+id/plusBtn3"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="210dp"
+                            android:text="+"
+                            android:textAlignment="center"
+                            android:background="@drawable/button_border"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="250dp"
+                        android:layout_marginLeft="32dp"
+                        android:text="Add"
+                        android:id="@+id/cabeAdd"
+                        android:textSize="10dp"
+                        android:background="@drawable/button_border"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_terong"
+                    android:layout_width="150dp"
+                    android:layout_height="285dp"
+                    android:layout_marginLeft="40dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="5dp">
+                        <ImageView
+                            android:id="@+id/terong"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/terong"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="47dp"
+                        android:clickable="false"
+                        android:text="TERONG"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:clickable="false"
+                        android:text="Rp. 5000/kg"
+                        android:textSize="15dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusBtn4"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="210dp"
+                            android:text="-"
+                            android:background="@drawable/button_border"/>
+
+                        <TextView
+                            android:id="@+id/counterText4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="0"
+                            android:textSize="15dp" />
+
+                        <Button
+                            android:id="@+id/plusBtn4"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="210dp"
+                            android:text="+"
+                            android:textAlignment="center"
+                            android:background="@drawable/button_border"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="250dp"
+                        android:layout_marginLeft="32dp"
+                        android:text="Add"
+                        android:id="@+id/terongAdd"
+                        android:textSize="10dp"
+                        android:background="@drawable/button_border"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#8d93ab"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/frame_jagung"
+                    android:layout_width="150dp"
+                    android:layout_height="285dp"
+                    android:layout_marginLeft="40dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="5dp">
+                        <ImageView
+                            android:id="@+id/jagung"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/jagung"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="47dp"
+                        android:clickable="false"
+                        android:text="JAGUNG"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:clickable="false"
+                        android:text="Rp. 4.000/kg"
+                        android:textSize="15dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusBtn5"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="210dp"
+                            android:text="-"
+                            android:background="@drawable/button_border"/>
+
+                        <TextView
+                            android:id="@+id/counterText5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="0"
+                            android:textSize="15dp" />
+
+                        <Button
+                            android:id="@+id/plusBtn5"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="210dp"
+                            android:text="+"
+                            android:textAlignment="center"
+                            android:background="@drawable/button_border"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="250dp"
+                        android:layout_marginLeft="32dp"
+                        android:text="Add"
+                        android:id="@+id/jagungAdd"
+                        android:textSize="10dp"
+                        android:background="@drawable/button_border"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_timun"
+                    android:layout_width="150dp"
+                    android:layout_height="285dp"
+                    android:layout_marginLeft="40dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="5dp">
+                        <ImageView
+                            android:id="@+id/timun"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/timun"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="51dp"
+                        android:clickable="false"
+                        android:text="TIMUN"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:clickable="false"
+                        android:text="Rp. 5.000/kg"
+                        android:textSize="15dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusBtn6"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="210dp"
+                            android:text="-"
+                            android:background="@drawable/button_border"/>
+
+                        <TextView
+                            android:id="@+id/counterText6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="0"
+                            android:textSize="15dp" />
+
+                        <Button
+                            android:id="@+id/plusBtn6"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="210dp"
+                            android:text="+"
+                            android:textAlignment="center"
+                            android:background="@drawable/button_border"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="250dp"
+                        android:layout_marginLeft="32dp"
+                        android:text="Add"
+                        android:id="@+id/timunAdd"
+                        android:textSize="10dp"
+                        android:background="@drawable/button_border"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#8d93ab"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/frame_pisang"
+                    android:layout_width="150dp"
+                    android:layout_height="285dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="5dp">
+                        <ImageView
+                            android:id="@+id/pisang"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/pisang" />
+
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="50dp"
+                        android:clickable="false"
+                        android:text="PISANG"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:clickable="false"
+                        android:text="Rp. 14.500/kg"
+                        android:textSize="15dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusBtn7"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="210dp"
+                            android:text="-"
+                            android:background="@drawable/button_border"/>
+
+                        <TextView
+                            android:id="@+id/counterText7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="0"
+                            android:textSize="15dp" />
+
+                        <Button
+                            android:id="@+id/plusBtn7"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="210dp"
+                            android:text="+"
+                            android:textAlignment="center"
+                            android:background="@drawable/button_border"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="250dp"
+                        android:layout_marginLeft="32dp"
+                        android:text="Add"
+                        android:id="@+id/pisangAdd"
+                        android:textSize="10dp"
+                        android:background="@drawable/button_border"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_mangga"
+                    android:layout_width="150dp"
+                    android:layout_height="285dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="5dp">
+                        <ImageView
+                            android:id="@+id/mangga"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/mangga"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="43dp"
+                        android:clickable="false"
+                        android:text="MANGGA"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:clickable="false"
+                        android:text="Rp. 20.000/kg"
+                        android:textSize="15dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusBtn8"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="210dp"
+                            android:text="-"
+                            android:background="@drawable/button_border"/>
+
+                        <TextView
+                            android:id="@+id/counterText8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="0"
+                            android:textSize="15dp" />
+
+                        <Button
+                            android:id="@+id/plusBtn8"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="210dp"
+                            android:text="+"
+                            android:textAlignment="center"
+                            android:background="@drawable/button_border"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="250dp"
+                        android:layout_marginLeft="32dp"
+                        android:text="Add"
+                        android:id="@+id/manggaAdd"
+                        android:textSize="10dp"
+                        android:background="@drawable/button_border"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#8d93ab"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/frame_apel"
+                    android:layout_width="150dp"
+                    android:layout_height="285dp"
+                    android:layout_marginLeft="40dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="5dp">
+                        <ImageView
+                            android:id="@+id/apel"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/apel1"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="57dp"
+                        android:clickable="false"
+                        android:text="APEL"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:clickable="false"
+                        android:text="Rp. 25.000/kg"
+                        android:textSize="15dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusBtn9"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="210dp"
+                            android:text="-"
+                            android:background="@drawable/button_border"/>
+
+                        <TextView
+                            android:id="@+id/counterText9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="0"
+                            android:textSize="15dp" />
+
+                        <Button
+                            android:id="@+id/plusBtn9"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="210dp"
+                            android:text="+"
+                            android:textAlignment="center"
+                            android:background="@drawable/button_border"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="250dp"
+                        android:layout_marginLeft="32dp"
+                        android:text="Add"
+                        android:id="@+id/apelAdd"
+                        android:textSize="10dp"
+                        android:background="@drawable/button_border"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/lanjutbelanja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/button_border"
+                android:text="HALAMAN UTAMA" />
+            <Button
+                android:id="@+id/pesansekarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/button_border"
+                android:text="PESAN SEKARANG" />
+            <Button
+                android:id="@+id/kembali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_border"
+                android:text="KEMBALI" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

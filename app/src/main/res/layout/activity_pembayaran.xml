@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="10dp"
+    tools:context=".Pembayaran">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="PEMBAYARAN"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/open_sans_extrabold"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Pilih Metode Pembayaran:"
+                android:textSize="20dp"
+                android:fontFamily="@font/open_sans_bold"/>
+            <RadioGroup
+                android:id="@+id/metode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/bni"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="BNI"
+                    android:textSize="18dp"/>
+                <RadioButton
+                    android:id="@+id/bri"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="BRI"
+                    android:textSize="18dp"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nama Pemilik Rekening:"
+                android:textSize="20dp"
+                android:fontFamily="@font/open_sans_bold"/>
+            <EditText
+                android:id="@+id/pemilikrekening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="No. Rekening"
+                android:textSize="20sp"
+                android:fontFamily="@font/open_sans_bold"/>
+            <EditText
+                android:id="@+id/norekening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nama Bank"
+                android:textSize="20dp"
+                android:fontFamily="@font/open_sans_bold"/>
+            <EditText
+                android:id="@+id/namabank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:hint="cth:BCA, BRI, BNI, CIMB, dll"/>
+
+            <Button
+                android:id="@+id/bayar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="BAYAR SEKARANG"
+                android:background="@drawable/button_border"/>
+            <Button
+                android:id="@+id/kembali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="KEMBALI"
+                android:background="@drawable/button_border"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

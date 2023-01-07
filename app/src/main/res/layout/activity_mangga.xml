@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="10dp"
+    tools:context=".Apel">
+
+    <TextView
+        android:id="@+id/klik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/open_sans_extrabold"
+        android:text="Farm.er"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ViewFlipper
+                android:id="@+id/flipper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/apel"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@mipmap/mangga"
+                    android:scaleType="centerCrop"/>
+                <ImageView
+                    android:id="@+id/apel1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@mipmap/kentang"
+                    android:scaleType="centerCrop"/>
+            </ViewFlipper>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Deskripsi Produk"
+                android:textSize="17dp"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Mangga segar yang kami produksi dari petani unggulan yaitu Mangga Harum Manis.
+Mangga ini terkenal akan rasanya yang manis dan segar. Selain terkenal manis dan segar, buah mangga ini
+ternyata mengandung kandungan gizi yang baik untuk kesehatan tubuh. Mangga memiliki manfaat untuk mencegah kanker,
+mengurangi potensi diabetes, dan penting untuk kesehatan kulit dan rambut."
+                android:textSize="13dp"
+                android:fontFamily="@font/open_sans"
+                android:justificationMode="inter_word"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Kandungan Produk"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/open_sans"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Kandungan dari buah mangga ini terdapat Vitamin A yang bagus untuk Ibu Hamil.
+Vitamin A sangat penting untuk perkembangan organ janin. Selain itu, terdapat Vitamin C, Zat Besi, Vitamin B6,
+Kalium, Folat, dan Serat. Buah Mangga ini juga memiliki antioksidan lutein dan zeaxanthin yang berfungsi dalam
+menjaga kesehatan mata, termasuk mencegah katarak dan degenerasi makula."
+                android:textSize="13dp"
+                android:fontFamily="@font/open_sans"
+                android:justificationMode="inter_word"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Preparation"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/open_sans"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="--"
+                android:textSize="13dp"
+                android:fontFamily="@font/open_sans"
+                android:justificationMode="inter_word"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HARGA"
+                        android:textSize="20dp"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/open_sans_extrabold"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:text="Rp. 20.000/kg"
+                        android:textSize="20dp"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/open_sans_extrabold"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_extrabold"
+                        android:text="HALAL"
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:text="Terjamin"
+                        android:textSize="20dp"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/open_sans_extrabold"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/minus"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:background="@drawable/button_border"/>
+                <TextView
+                    android:id="@+id/counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:text="0"
+                    android:textSize="20dp"/>
+                <Button
+                    android:id="@+id/plus"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:background="@drawable/button_border"/>
+                <Button
+                    android:id="@+id/beli"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="BELI"
+                    android:background="@drawable/button_border"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="PESAN SEKARANG"
+                android:background="@drawable/button_border"/>
+            <Button
+                android:id="@+id/lanjut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="LANJUT BELANJA"
+                android:background="@drawable/button_border"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

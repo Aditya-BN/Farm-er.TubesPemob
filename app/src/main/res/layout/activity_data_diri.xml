@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="10dp"
+    tools:context=".DataDiri">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="FORMULIR PEMBELIAN"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/open_sans_extrabold"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:text="Nama:"
+               android:textSize="20dp"
+               android:fontFamily="@font/open_sans_bold"/>
+           <EditText
+               android:id="@+id/nama"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="3dp"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:text="Alamat:"
+               android:textSize="20dp"
+               android:fontFamily="@font/open_sans_bold"/>
+           <EditText
+               android:id="@+id/alamat"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="3dp"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:text="No. Telpon:"
+               android:textSize="20dp"
+               android:fontFamily="@font/open_sans_bold"/>
+           <EditText
+               android:id="@+id/telpon"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="3dp"
+               android:inputType="number"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:text="Email:"
+               android:textSize="20dp"
+               android:fontFamily="@font/open_sans_bold"/>
+           <EditText
+               android:id="@+id/email"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="3dp"
+               android:inputType="textEmailAddress"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:text="Periode Pengiriman:"
+               android:textSize="20dp"
+               android:fontFamily="@font/open_sans_bold"/>
+           <RadioGroup
+               android:id="@+id/pengiriman"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_marginTop="5dp"
+               android:orientation="horizontal">
+
+               <RadioButton
+                   android:id="@+id/senin"
+                   android:layout_width="100dp"
+                   android:layout_height="wrap_content"
+                   android:text="Senin"
+                   android:textSize="18dp"/>
+               <RadioButton
+                   android:id="@+id/rabu"
+                   android:layout_width="100dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:text="Rabu"
+                   android:textSize="18dp"/>
+               <RadioButton
+                   android:id="@+id/sabtu"
+                   android:layout_width="100dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:text="Sabtu"
+                   android:textSize="18dp"/>
+           </RadioGroup>
+
+           <Button
+               android:id="@+id/lanjutbayar"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="50dp"
+               android:text="PEMBAYARAN"
+               android:background="@drawable/button_border"/>
+           <Button
+               android:id="@+id/lanjutbelanja"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:text="LANJUT BELANJA"
+               android:background="@drawable/button_border"/>
+       </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
