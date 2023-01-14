@@ -182,6 +182,7 @@ menjaga kesehatan mata, termasuk mencegah katarak dan degenerasi makula."
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:text="-"
+                    android:textColor="@color/white"
                     android:background="@drawable/button_border"/>
                 <TextView
                     android:id="@+id/counter"
@@ -195,6 +196,7 @@ menjaga kesehatan mata, termasuk mencegah katarak dan degenerasi makula."
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:text="+"
+                    android:textColor="@color/white"
                     android:background="@drawable/button_border"/>
                 <Button
                     android:id="@+id/beli"
@@ -202,6 +204,7 @@ menjaga kesehatan mata, termasuk mencegah katarak dan degenerasi makula."
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:text="BELI"
+                    android:textColor="@color/white"
                     android:background="@drawable/button_border"/>
             </LinearLayout>
 
@@ -211,6 +214,7 @@ menjaga kesehatan mata, termasuk mencegah katarak dan degenerasi makula."
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
                 android:text="PESAN SEKARANG"
+                android:textColor="@color/white"
                 android:background="@drawable/button_border"/>
             <Button
                 android:id="@+id/lanjut"
@@ -219,6 +223,7 @@ menjaga kesehatan mata, termasuk mencegah katarak dan degenerasi makula."
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="LANJUT BELANJA"
+                android:textColor="@color/white"
                 android:background="@drawable/button_border"/>
 
             <LinearLayout

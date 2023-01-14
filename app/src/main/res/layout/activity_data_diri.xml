@@ -15,6 +15,7 @@
         android:layout_marginBottom="10dp"
         android:text="FORMULIR PEMBELIAN"
         android:textSize="25dp"
+        android:textColor="@color/green"
         android:textAlignment="center"
         android:fontFamily="@font/open_sans_extrabold"/>
     <ScrollView
@@ -32,56 +33,75 @@
                android:layout_marginTop="20dp"
                android:text="Nama:"
                android:textSize="20dp"
-               android:fontFamily="@font/open_sans_bold"/>
+               android:textColor="@color/green"
+               android:fontFamily="@font/open_sans_bold"
+               android:inputType="text"/>
+
            <EditText
                android:id="@+id/nama"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="3dp"/>
+               android:layout_height="46dp"
+               android:layout_marginTop="3dp"
+               android:background="@drawable/edit_text_background"
+               android:hint="Type your name here...."
+               android:textAlignment="center" />
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_marginTop="5dp"
                android:text="Alamat:"
                android:textSize="20dp"
+               android:textColor="@color/green"
                android:fontFamily="@font/open_sans_bold"/>
            <EditText
                android:id="@+id/alamat"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="3dp"/>
+               android:layout_height="46dp"
+               android:layout_marginTop="3dp"
+               android:background="@drawable/edit_text_background"
+               android:hint="Type your address here...."
+               android:textAlignment="center"/>
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_marginTop="5dp"
                android:text="No. Telpon:"
                android:textSize="20dp"
+               android:textColor="@color/green"
                android:fontFamily="@font/open_sans_bold"/>
            <EditText
                android:id="@+id/telpon"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="46dp"
                android:layout_marginTop="3dp"
-               android:inputType="number"/>
+               android:background="@drawable/edit_text_background"
+               android:inputType="number"
+               android:hint="Type your number here...."
+               android:textAlignment="center"/>
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_marginTop="5dp"
                android:text="Email:"
                android:textSize="20dp"
+               android:textColor="@color/green"
                android:fontFamily="@font/open_sans_bold"/>
            <EditText
                android:id="@+id/email"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="46dp"
                android:layout_marginTop="3dp"
-               android:inputType="textEmailAddress"/>
+               android:background="@drawable/edit_text_background"
+               android:inputType="textEmailAddress"
+               android:hint="Type your email here...."
+               android:textAlignment="center"/>
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_marginTop="5dp"
                android:text="Periode Pengiriman:"
                android:textSize="20dp"
+               android:textColor="@color/green"
                android:fontFamily="@font/open_sans_bold"/>
            <RadioGroup
                android:id="@+id/pengiriman"
@@ -95,6 +115,7 @@
                    android:layout_width="100dp"
                    android:layout_height="wrap_content"
                    android:text="Senin"
+                   android:textColor="@color/green"
                    android:textSize="18dp"/>
                <RadioButton
                    android:id="@+id/rabu"
@@ -102,6 +123,7 @@
                    android:layout_height="wrap_content"
                    android:layout_marginLeft="10dp"
                    android:text="Rabu"
+                   android:textColor="@color/green"
                    android:textSize="18dp"/>
                <RadioButton
                    android:id="@+id/sabtu"
@@ -109,6 +131,7 @@
                    android:layout_height="wrap_content"
                    android:layout_marginLeft="10dp"
                    android:text="Sabtu"
+                   android:textColor="@color/green"
                    android:textSize="18dp"/>
            </RadioGroup>
 
@@ -118,6 +141,7 @@
                android:layout_height="wrap_content"
                android:layout_marginTop="50dp"
                android:text="PEMBAYARAN"
+               android:textColor="@color/white"
                android:background="@drawable/button_border"/>
            <Button
                android:id="@+id/lanjutbelanja"
@@ -125,6 +149,7 @@
                android:layout_height="wrap_content"
                android:layout_marginTop="10dp"
                android:text="LANJUT BELANJA"
+               android:textColor="@color/white"
                android:background="@drawable/button_border"/>
        </LinearLayout>
     </ScrollView>

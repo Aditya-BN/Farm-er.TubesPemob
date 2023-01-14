@@ -3,6 +3,11 @@
     package="com.example.zakiamahbubabdullah_farmer">
 
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <queries>
+        <package android:name="com.whatsapp"/>
+        <package android:name="com.whatsapp.w4b"/>
+    </queries>
+
 
     <application
         android:name=".GlobalClass"
@@ -12,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TentangKami"></activity>
+        <activity android:name=".TambahActivity"></activity>
+        <activity android:name=".Firebase" />
+        <activity android:name=".TentangKami" />
         <activity android:name=".HalamanAkhir" />
         <activity android:name=".Pisang" />
         <activity android:name=".RekapData" />

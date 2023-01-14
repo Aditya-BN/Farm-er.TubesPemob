@@ -83,6 +83,7 @@
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="210dp"
                             android:text="-"
+                            android:textColor="@color/white"
                             android:background="@drawable/button_border"/>
 
                         <TextView
@@ -101,6 +102,7 @@
                             android:layout_height="35dp"
                             android:layout_marginTop="210dp"
                             android:text="+"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:background="@drawable/button_border"/>
                     </LinearLayout>
@@ -112,6 +114,7 @@
                         android:text="Add"
                         android:id="@+id/kentangAdd"
                         android:textSize="10dp"
+                        android:textColor="@color/white"
                         android:background="@drawable/button_border"/>
                 </FrameLayout>
                 <FrameLayout
@@ -164,6 +167,7 @@
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="210dp"
                             android:text="-"
+                            android:textColor="@color/white"
                             android:background="@drawable/button_border"/>
 
                         <TextView
@@ -182,6 +186,7 @@
                             android:layout_height="35dp"
                             android:layout_marginTop="210dp"
                             android:text="+"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:background="@drawable/button_border"/>
                     </LinearLayout>
@@ -191,6 +196,7 @@
                         android:layout_marginTop="250dp"
                         android:layout_marginLeft="32dp"
                         android:text="Add"
+                        android:textColor="@color/white"
                         android:id="@+id/rawitAdd"
                         android:textSize="10dp"
                         android:background="@drawable/button_border"/>
@@ -253,6 +259,7 @@
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="210dp"
                             android:text="-"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:background="@drawable/button_border"/>
 
@@ -272,6 +279,7 @@
                             android:layout_height="35dp"
                             android:layout_marginTop="210dp"
                             android:text="+"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:background="@drawable/button_border"/>
                     </LinearLayout>
@@ -282,6 +290,7 @@
                         android:layout_marginLeft="32dp"
                         android:text="Add"
                         android:id="@+id/cabeAdd"
+                        android:textColor="@color/white"
                         android:textSize="10dp"
                         android:background="@drawable/button_border"/>
                 </FrameLayout>
@@ -335,6 +344,7 @@
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="210dp"
                             android:text="-"
+                            android:textColor="@color/white"
                             android:background="@drawable/button_border"/>
 
                         <TextView
@@ -353,6 +363,7 @@
                             android:layout_height="35dp"
                             android:layout_marginTop="210dp"
                             android:text="+"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:background="@drawable/button_border"/>
                     </LinearLayout>
@@ -362,6 +373,7 @@
                         android:layout_marginTop="250dp"
                         android:layout_marginLeft="32dp"
                         android:text="Add"
+                        android:textColor="@color/white"
                         android:id="@+id/terongAdd"
                         android:textSize="10dp"
                         android:background="@drawable/button_border"/>
@@ -424,6 +436,7 @@
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="210dp"
                             android:text="-"
+                            android:textColor="@color/white"
                             android:background="@drawable/button_border"/>
 
                         <TextView
@@ -442,6 +455,7 @@
                             android:layout_height="35dp"
                             android:layout_marginTop="210dp"
                             android:text="+"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:background="@drawable/button_border"/>
                     </LinearLayout>
@@ -452,6 +466,7 @@
                         android:layout_marginLeft="32dp"
                         android:text="Add"
                         android:id="@+id/jagungAdd"
+                        android:textColor="@color/white"
                         android:textSize="10dp"
                         android:background="@drawable/button_border"/>
                 </FrameLayout>
@@ -505,6 +520,7 @@
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="210dp"
                             android:text="-"
+                            android:textColor="@color/white"
                             android:background="@drawable/button_border"/>
 
                         <TextView
@@ -523,6 +539,7 @@
                             android:layout_height="35dp"
                             android:layout_marginTop="210dp"
                             android:text="+"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:background="@drawable/button_border"/>
                     </LinearLayout>
@@ -532,6 +549,7 @@
                         android:layout_marginTop="250dp"
                         android:layout_marginLeft="32dp"
                         android:text="Add"
+                        android:textColor="@color/white"
                         android:id="@+id/timunAdd"
                         android:textSize="10dp"
                         android:background="@drawable/button_border"/>
@@ -595,6 +613,7 @@
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="210dp"
                             android:text="-"
+                            android:textColor="@color/white"
                             android:background="@drawable/button_border"/>
 
                         <TextView
@@ -613,6 +632,7 @@
                             android:layout_height="35dp"
                             android:layout_marginTop="210dp"
                             android:text="+"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:background="@drawable/button_border"/>
                     </LinearLayout>
@@ -624,6 +644,7 @@
                         android:text="Add"
                         android:id="@+id/pisangAdd"
                         android:textSize="10dp"
+                        android:textColor="@color/white"
                         android:background="@drawable/button_border"/>
                 </FrameLayout>
 
@@ -677,6 +698,7 @@
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="210dp"
                             android:text="-"
+                            android:textColor="@color/white"
                             android:background="@drawable/button_border"/>
 
                         <TextView
@@ -695,6 +717,7 @@
                             android:layout_height="35dp"
                             android:layout_marginTop="210dp"
                             android:text="+"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:background="@drawable/button_border"/>
                     </LinearLayout>
@@ -705,6 +728,7 @@
                         android:layout_marginLeft="32dp"
                         android:text="Add"
                         android:id="@+id/manggaAdd"
+                        android:textColor="@color/white"
                         android:textSize="10dp"
                         android:background="@drawable/button_border"/>
                 </FrameLayout>
@@ -766,6 +790,7 @@
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="210dp"
                             android:text="-"
+                            android:textColor="@color/white"
                             android:background="@drawable/button_border"/>
 
                         <TextView
@@ -784,6 +809,7 @@
                             android:layout_height="35dp"
                             android:layout_marginTop="210dp"
                             android:text="+"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:background="@drawable/button_border"/>
                     </LinearLayout>
@@ -793,6 +819,7 @@
                         android:layout_marginTop="250dp"
                         android:layout_marginLeft="32dp"
                         android:text="Add"
+                        android:textColor="@color/white"
                         android:id="@+id/apelAdd"
                         android:textSize="10dp"
                         android:background="@drawable/button_border"/>
@@ -805,6 +832,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="7dp"
+                android:textColor="@color/white"
                 android:background="@drawable/button_border"
                 android:text="HALAMAN UTAMA" />
             <Button
@@ -813,6 +841,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="7dp"
+                android:textColor="@color/white"
                 android:background="@drawable/button_border"
                 android:text="PESAN SEKARANG" />
             <Button
@@ -821,6 +850,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="7dp"
+                android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/button_border"
                 android:text="KEMBALI" />

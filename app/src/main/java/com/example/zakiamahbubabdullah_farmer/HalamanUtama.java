@@ -17,8 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
+//import com.google.android.gms.maps.GoogleMap;
+//import com.google.android.gms.maps.MapView;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.Timer;
@@ -38,8 +38,8 @@ public class HalamanUtama extends AppCompatActivity {
     Animation fadein, fadeout;
     Button semuaproduk;
 
-    private MapView mapView;
-    private GoogleMap gmap;
+//    private MapView mapView;
+//    private GoogleMap gmap;
     private static final String MAP_VIEW_BUNDLE_KEY = "MapViewBundleKey";
 
     @Override
@@ -232,5 +232,6 @@ public class HalamanUtama extends AppCompatActivity {
                 startActivity(intent11);
             }
         });
+
     }
 }

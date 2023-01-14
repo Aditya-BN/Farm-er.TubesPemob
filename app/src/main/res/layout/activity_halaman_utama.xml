@@ -475,7 +475,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="10dp"
                 android:text="TAMPILKAN SEMUA PRODUK"
-                android:background="@drawable/button_border"/>
+                android:backgroundTint="@color/white"
+                />
 
             <Button
                 android:id="@+id/infokami"
@@ -487,7 +488,8 @@
                 android:textSize="20dp"
                 android:textAlignment="center"
                 android:fontFamily="@font/open_sans_extrabold"
-                android:background="@drawable/button_border"/>
+                android:backgroundTint="@color/white"
+               />
 
             <ViewFlipper
                 android:id="@+id/flipper"

@@ -1,29 +1,47 @@
 package com.example.zakiamahbubabdullah_farmer;
 
-import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
-import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.checkerframework.checker.nullness.qual.NonNull;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RekapData extends AppCompatActivity {
     String data;
     TextView rekapNama, rekapAlamat, rekapTelpon, rekapEmail, rekapPengiriman, rekapPembayaran, rekapPemilikrek, rekapNorek, rekapBank, rekapProduk, rekapTotal,rekapBiayaAfterOngkir;
     String kentang, cabe, rawit, terong, jagung, timun, pisang, mangga, apel;
     final int SEND_SMS_PERMISSION_REQUEST_CODE = 1;
+//    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+//    DatabaseReference reff;
+//    GlobalClass GlobalClass;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rekap_data);
+
+        progressDialog = new ProgressDialog(RekapData.this);
+        progressDialog.setTitle("Loading");
+        progressDialog.setMessage("Menyimpan....");
 
         rekapNama = findViewById(R.id.rekapNama);
         rekapAlamat = findViewById(R.id.rekapAlamat);
@@ -75,15 +93,15 @@ public class RekapData extends AppCompatActivity {
         int banyakapel = globalClass.getBanyakApel();
 
         //get banyaknya produk yang dibeli di halaman produk masing2
-        int banyakKentang = globalClass.getBanyakkentang();
-        int banyakCabe = globalClass.getBanyakcabe();
-        int banyakRawit = globalClass.getBanyakrawit();
-        int banyakTerong = globalClass.getBanyakterong();
-        int banyakJagung = globalClass.getBanyakjagung();
-        int banyakTimun = globalClass.getBanyaktimun();
-        int banyakPisang = globalClass.getBanyakpisang();
-        int banyakApel = globalClass.getBanyakapel();
-        int banyakMangga = globalClass.getBanyakmangga();
+        int banyakKentang = globalClass.getBanyakkentang1();
+        int banyakCabe = globalClass.getBanyakcabe1();
+        int banyakRawit = globalClass.getBanyakrawit1();
+        int banyakTerong = globalClass.getBanyakterong1();
+        int banyakJagung = globalClass.getBanyakjagung1();
+        int banyakTimun = globalClass.getBanyaktimun1();
+        int banyakPisang = globalClass.getBanyakpisang1();
+        int banyakApel = globalClass.getBanyakapel1();
+        int banyakMangga = globalClass.getBanyakmangga1();
 
         //total banyaknya produk yang dibeli
         int banyakprodukkentang = banyakKentang + banyakkentang;
@@ -157,7 +175,7 @@ public class RekapData extends AppCompatActivity {
         int hargamangga =+ totalMangga + totMangga;
         int hargaapel =+ totalApel + totApel;
 
-        final String nama = ""+getnama;
+        final String nama = ""+ getnama;
         final String alamat = ""+getalamat;
         final String telpon = ""+gettelpon;
         final String email = ""+getemail;
@@ -334,52 +352,82 @@ public class RekapData extends AppCompatActivity {
         Button bayar = findViewById(R.id.bayar);
         Button lanjutbelanja = findViewById(R.id.lanjutbelanja);
 
-        //SMS
-//        bayar.setEnabled(false);
-//        if (checkPermission(Manifest.permission.SEND_SMS)){
-//            bayar.setEnabled(true);
-//        }else {
-//            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.SEND_SMS}, SEND_SMS_PERMISSION_REQUEST_CODE);
-//        }
-//
-//        String adminTelp = "082310205957";
-//
-//        if (telpon == null || telpon.length() == 0 || nama == null || nama.length()==0 || alamat == null || alamat.length()==0 || pengiriman == null || pengiriman.length()==0 || pembayaran == null || pembayaran.length()==0 || pemilikrek == null || pemilikrek.length()==0 || norek == null || norek.length()==0 || produk == null || produk.length()==0 || total == null || total.length()==0){
-//            return;
-//        }
-//        if (checkPermission(Manifest.permission.SEND_SMS)){
-//            SmsManager smsManager = SmsManager.getDefault();
-//            smsManager.sendTextMessage(adminTelp, null, nama  + "\n" + alamat + "\n" + telpon + "\n" + pengiriman  + "\n" + nproduk +"\n" +ongkir + "\n" + "Total: " + Ongkir , null,null);
-//            Toast.makeText(this, "Message Sent!", Toast.LENGTH_SHORT).show();
-//        }else {
-//            Toast.makeText(this, "Permission Denied!", Toast.LENGTH_SHORT).show();
-//        }
-        //////
+
+//        GlobalClass = new GlobalClass();
+//        reff = FirebaseDatabase.getInstance().getReference().child("GlobalClass");
 
 
         final String finalNproduk = nproduk;
         bayar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(RekapData.this, HalamanAkhir.class);
-                startActivity(intent1);
 
-                if (telpon == null || telpon.length() == 0 || nama == null || nama.length()==0 || alamat == null || alamat.length()==0 || pengiriman == null || pengiriman.length()==0 || pembayaran == null || pembayaran.length()==0 || pemilikrek == null || pemilikrek.length()==0 || norek == null || norek.length()==0 || produk == null || produk.length()==0 || total == null || total.length()==0){
+                //coba firebase
+                String fr_nama = rekapNama.getText().toString().trim();
+                String fr_alamat = rekapAlamat.getText().toString().trim();
+                String fr_telpon = rekapTelpon.getText().toString().trim();
+                String fr_email = rekapEmail.getText().toString().trim();
+                String fr_pengiriman = rekapPengiriman.getText().toString().trim();
+                String fr_pembayaran = rekapPembayaran.getText().toString().trim();
+                String fr_pemilikrek = rekapPemilikrek.getText().toString().trim();
+                String fr_norek = rekapNorek.getText().toString().trim();
+                String fr_bank = rekapBank.getText().toString().trim();
+                String fr_produk = rekapProduk.getText().toString().trim();
+                Integer fr_total = Integer.parseInt(rekapTotal.getText().toString().trim());
+                Integer fr_biayaafterongkir = Integer.parseInt(rekapBiayaAfterOngkir.getText().toString().trim());
+
+                //firestore
+                savedata(fr_nama,fr_alamat,fr_telpon,fr_email,fr_pengiriman,fr_pembayaran,fr_pemilikrek,fr_norek,fr_bank,fr_produk,fr_total,fr_biayaafterongkir);
+//
+//                GlobalClass.setGCNama(fr_nama);
+//                GlobalClass.setGCAlamat(fr_alamat);
+//                GlobalClass.setGCNoHp(fr_telpon);
+//                GlobalClass.setGCEmail(fr_email);
+//                GlobalClass.setGCPengiriman(fr_pengiriman);
+//                GlobalClass.setGCPilihBank(fr_pembayaran);
+//                GlobalClass.setGCNamaPemilik(fr_pemilikrek);
+//                GlobalClass.setGCNoRek(fr_norek);
+//                GlobalClass.setGCNamaBank(fr_bank);
+//                GlobalClass.setGCProduk(fr_produk);
+//                GlobalClass.setTotalBayar(fr_total);
+//                GlobalClass.setTotalBayarProduk(fr_biayaafterongkir);
+//
+//                reff.push().setValue(GlobalClass);
+//                Toast.makeText(RekapData.this, "data inserted successfully", Toast.LENGTH_LONG).show();
+//
+
+
+                //firebase
+//                database.child("GlobalClass").push().setValue(new GlobalClass(nama, alamat,telpon,email,pengiriman,pembayaran,pemilikrek,norek,namabank,finalNproduk,totalBayar,biayaAfterOngkir)).addOnSuccessListener(aVoid -> {
+//                    Toast.makeText(RekapData.this, "Data berhasil disimpan!", Toast.LENGTH_SHORT).show();
+//                    startActivity(new Intent(RekapData.this, Firebase.class));
+//                    finish();
+//
+//                }) .addOnFailureListener(new OnFailureListener() {
+//                    @Override
+//                    public void onFailure(@NonNull Exception e) {
+//                        Toast.makeText(RekapData.this, "Gagal menyimpan data!", Toast.LENGTH_SHORT).show();
+//
+//                    }
+//                });
+
+                if (telpon == null || telpon.length() == 0 || nama == null || nama.length()==0 || alamat == null || alamat.length()==0 || pengiriman == null || pengiriman.length()==0 || pembayaran == null || pembayaran.length()==0 || pemilikrek == null || pemilikrek.length()==0 || norek == null || norek.length()==0 || produk == null || produk.length()==0 || total == null || total.length()==0) {
                     return;
                 }
 
-                String semuapesanan = "Pesanan Anda :"+"\n"+
-                                        "Nama: " +nama+ "\n"+
-                                        "Alamat: "+alamat+"\n"+
-                                        "No. Hp: " +telpon+"\n"+
-                                        "Email: "+email+"\n"+
-                                        "Pengiriman: "+pengiriman+"\n"+
-                                        "Pembayaran: "+pembayaran+"\n"+
-                                        "Pemilik Rekening: "+pemilikrek+"\n"+
-                                        "No. Rekening: "+norek+"\n"+"Bank: "+namabank+"\n"+
-                                        "Produk: "+ finalNproduk +"\n"+
-                                        "Total Bayar: "+totalBayar+"\n"+
-                                        "Total Bayar dengan Ongkir: "+ biayaAfterOngkir;
+                String semuapesanan = "Pesanan Anda :"+"\n"
+                        +"Nama: " +nama+ "\n"
+                        +"Alamat: "+alamat+"\n"
+                        +"No. Hp: " +telpon+"\n"
+                        +"Email: "+email+"\n"
+                        +"Pengiriman: "+pengiriman+"\n"
+                        +"Pembayaran: "+pembayaran+"\n"
+                        +"Pemilik Rekening: "+pemilikrek+"\n"
+                        +"No. Rekening: "+norek+"\n"
+                        +"Bank: "+namabank+"\n"
+                        +"Produk: "+finalNproduk+"\n"
+                        +"Total Bayar: "+totalBayar+"\n"
+                        +"Total Bayar dengan Ongkir: "+ biayaAfterOngkir;
 
                 Intent kirimWA= new Intent(Intent.ACTION_SEND);
                 kirimWA.setType("text/plain");
@@ -387,6 +435,18 @@ public class RekapData extends AppCompatActivity {
                 kirimWA.putExtra("jid",telpon +"@s.whatsapp.net");
                 kirimWA.setPackage("com.whatsapp");
                 startActivity(kirimWA);
+
+                startActivity(new Intent(RekapData.this, HalamanAkhir.class));
+
+//                boolean installed = appInstalledOrNot("com.whatsapp");
+//                if(installed){
+//                    Intent intent = new Intent(Intent.ACTION_SEND, Uri.parse("https://api.whatsapp.com/send?phone=" +fr_telpon
+//                                                                            +"&text=" + semuapesanan));
+//                    startActivity(intent);
+//
+//                } else {
+//                    Toast.makeText(RekapData.this, "Whatsapp not installed on your device",Toast.LENGTH_SHORT).show();
+//                }
             }
         });
 
@@ -402,5 +462,55 @@ public class RekapData extends AppCompatActivity {
     public boolean checkPermission(String permission){
         int check = ContextCompat.checkSelfPermission(this,permission);
         return (check == PackageManager.PERMISSION_GRANTED);
+    }
+
+    private void savedata(String nama, String alamat, String telpon, String email, String pengiriman,
+                          String pembayaran, String pemilikrek, String norek, String namabank,
+                          String finalNproduk, Integer totalBayar, Integer biayaAfterOngkir){
+        Map<String, Object> user = new HashMap<>();
+        user.put("nama : ",nama);
+        user.put("alamat : ", alamat);
+        user.put("No Hp : ", telpon);
+        user.put("Email", email);
+        user.put("pengiriman : ", pengiriman);
+        user.put("pembayaran : ", pembayaran);
+        user.put("nama pemilik rekening : ", pemilikrek);
+        user.put("nomor rekening : ", norek);
+        user.put("nama bank : ", namabank);
+        user.put("produk : ", finalNproduk);
+        user.put("total bayar : ", totalBayar);
+        user.put("total bayar + ongkir : ", biayaAfterOngkir);
+
+        progressDialog.show();
+        db.collection("users")
+                .add(user)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Toast.makeText(getApplicationContext(), "Berhasil!", Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+                        finish();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+                    }
+                });
+    }
+
+    private boolean appInstalledOrNot(String uri){
+        PackageManager packageManager = getPackageManager();
+        boolean appInstalled;
+
+        try {
+            packageManager.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
+            appInstalled = true;
+        } catch (PackageManager.NameNotFoundException e){
+            appInstalled = false;
+        }
+        return appInstalled;
     }
 }

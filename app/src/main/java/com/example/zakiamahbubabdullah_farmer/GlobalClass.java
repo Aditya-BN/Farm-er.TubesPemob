@@ -20,6 +20,40 @@ public class GlobalClass extends Application {
     private String GCTotal;
     private String GCProdukBuah;
     private String GCProdukSayur;
+    private String key;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public GlobalClass(String key) {
+        this.key = key;
+    }
+
+    public GlobalClass(){
+
+    }
+
+    public GlobalClass(String nama, String alamat, String telpon, String email, String pengiriman,
+                       String pembayaran, String pemilikrek, String norek, String namabank,
+                       String finalNproduk, Integer totalBayar, Integer biayaAfterOngkir) {
+        this.GCNama = nama;
+        this.GCAlamat = alamat;
+        this.GCNoHp = telpon;
+        this.GCEmail = email;
+        this.GCPengiriman = pengiriman;
+        this.GCPilihBank = pembayaran;
+        this.GCNamaPemilik = pemilikrek;
+        this.GCNoRek = norek;
+        this.GCNamaBank = namabank;
+        this.GCProduk = finalNproduk;
+        this.totalBayar = totalBayar;
+        this.totalBayarProduk = biayaAfterOngkir;
+    }
 
     //buat nama produk yang dibeli
     private String produkKentang;
@@ -55,15 +89,15 @@ public class GlobalClass extends Application {
     private String paketTerong;
 
     //buat banyaknya produk yang dibeli di halaman masing2 produk
-    private int banyakkentang;
-    private int banyakcabe;
-    private int banyakrawit;
-    private int banyakterong;
-    private int banyakjagung;
-    private int banyaktimun;
-    private int banyakpisang;
-    private int banyakmangga;
-    private int banyakapel;
+    private int banyakkentang1;
+    private int banyakcabe1;
+    private int banyakrawit1;
+    private int banyakterong1;
+    private int banyakjagung1;
+    private int banyaktimun1;
+    private int banyakpisang1;
+    private int banyakmangga1;
+    private int banyakapel1;
 
     //buat total produk yang dibeli di halaman produk masing2
     private int totalKentang;
@@ -92,6 +126,8 @@ public class GlobalClass extends Application {
     //buat total jumlah harga produk semuanya
     private int totalBayar;
     private int totalBayarProduk;
+
+
 
 
 
@@ -543,76 +579,76 @@ public class GlobalClass extends Application {
         this.banyakMangga = banyakMangga;
     }
 
-    public int getBanyakapel() {
-        return banyakapel;
+    public int getBanyakapel1() {
+        return banyakapel1;
     }
 
-    public void setBanyakapel(int banyakapel) {
-        this.banyakapel = banyakapel;
+    public void setBanyakapel1(int banyakapel1) {
+        this.banyakapel1 = banyakapel1;
     }
 
-    public int getBanyakmangga() {
-        return banyakmangga;
+    public int getBanyakmangga1() {
+        return banyakmangga1;
     }
 
-    public void setBanyakmangga(int banyakmangga) {
-        this.banyakmangga = banyakmangga;
+    public void setBanyakmangga1(int banyakmangga1) {
+        this.banyakmangga1 = banyakmangga1;
     }
 
-    public int getBanyakpisang() {
-        return banyakpisang;
+    public int getBanyakpisang1() {
+        return banyakpisang1;
     }
 
-    public void setBanyakpisang(int banyakpisang) {
-        this.banyakpisang = banyakpisang;
+    public void setBanyakpisang1(int banyakpisang1) {
+        this.banyakpisang1 = banyakpisang1;
     }
 
-    public int getBanyaktimun() {
-        return banyaktimun;
+    public int getBanyaktimun1() {
+        return banyaktimun1;
     }
 
-    public void setBanyaktimun(int banyaktimun) {
-        this.banyaktimun = banyaktimun;
+    public void setBanyaktimun1(int banyaktimun1) {
+        this.banyaktimun1 = banyaktimun1;
     }
 
-    public int getBanyakjagung() {
-        return banyakjagung;
+    public int getBanyakjagung1() {
+        return banyakjagung1;
     }
 
-    public void setBanyakjagung(int banyakjagung) {
-        this.banyakjagung = banyakjagung;
+    public void setBanyakjagung1(int banyakjagung1) {
+        this.banyakjagung1 = banyakjagung1;
     }
 
-    public int getBanyakterong() {
-        return banyakterong;
+    public int getBanyakterong1() {
+        return banyakterong1;
     }
 
-    public void setBanyakterong(int banyakterong) {
-        this.banyakterong = banyakterong;
+    public void setBanyakterong1(int banyakterong1) {
+        this.banyakterong1 = banyakterong1;
     }
 
-    public int getBanyakrawit() {
-        return banyakrawit;
+    public int getBanyakrawit1() {
+        return banyakrawit1;
     }
 
-    public void setBanyakrawit(int banyakrawit) {
-        this.banyakrawit = banyakrawit;
+    public void setBanyakrawit1(int banyakrawit1) {
+        this.banyakrawit1 = banyakrawit1;
     }
 
-    public int getBanyakcabe() {
-        return banyakcabe;
+    public int getBanyakcabe1() {
+        return banyakcabe1;
     }
 
-    public void setBanyakcabe(int banyakcabe) {
-        this.banyakcabe = banyakcabe;
+    public void setBanyakcabe1(int banyakcabe1) {
+        this.banyakcabe1 = banyakcabe1;
     }
 
-    public int getBanyakkentang() {
-        return banyakkentang;
+    public int getBanyakkentang1() {
+        return banyakkentang1;
     }
 
-    public void setBanyakkentang(int banyakkentang) {
-        this.banyakkentang = banyakkentang;
+    public void setBanyakkentang1(int banyakkentang1) {
+        this.banyakkentang1 = banyakkentang1;
     }
 
     public String getPaketKentang() {
